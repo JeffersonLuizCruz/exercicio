@@ -7,7 +7,7 @@ import java.util.List;
 public class Lista02 {
 
 /**
- * Escreva uma função que inverta a ordem dos elementos em uma lista.
+ * 02. Escreva uma função que inverta a ordem dos elementos em uma lista.
  * */
 	
 	public static List<String> invert(List<String> list) {
