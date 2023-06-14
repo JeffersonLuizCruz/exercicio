@@ -3,7 +3,7 @@ package com.exercicio.estudo.lista;
 import java.util.Arrays;
 import java.util.List;
 
-public class Lista {
+public class Lista01 {
 /**
  * 1. Crie um método que receba uma lista de números inteiros 
  * 	  e retorne a soma de todos os elementos.
