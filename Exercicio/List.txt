@@ -1,0 +1,24 @@
+Claro! Aqui está uma lista de 20 exercícios de nível intermediário a avançado envolvendo o uso da interface `List` em Java:
+
+1. Crie um método que receba uma lista de números inteiros e retorne a soma de todos os elementos.
+2. Escreva uma função que inverta a ordem dos elementos em uma lista.
+3. Implemente um método que receba uma lista de strings e retorne uma nova lista com todas as strings em ordem alfabética.
+4. Crie uma função que encontre o maior elemento em uma lista de números inteiros.
+5. Escreva um método que remova todos os elementos duplicados de uma lista.
+6. Implemente uma função que retorne o índice da primeira ocorrência de um elemento em uma lista.
+7. Crie um método que receba uma lista de números inteiros e retorne uma nova lista com todos os elementos elevados ao quadrado.
+8. Escreva uma função que verifique se uma lista está ordenada em ordem crescente.
+9. Implemente um método que remova todos os elementos ímpares de uma lista de números inteiros.
+10. Crie uma função que retorne uma lista contendo apenas os números pares de uma lista original.
+11. Escreva um método que receba duas listas de números inteiros e retorne uma nova lista contendo os elementos comuns às duas listas.
+12. Implemente uma função que receba uma lista de strings e retorne a quantidade de strings que começam com a letra "A".
+13. Crie um método que receba uma lista de objetos e retorne uma nova lista apenas com os objetos que são instâncias de uma determinada classe.
+14. Escreva uma função que concatene duas listas em uma única lista.
+15. Implemente um método que retorne o número de ocorrências de um elemento em uma lista.
+16. Crie uma função que receba uma lista de números inteiros e retorne uma nova lista com os elementos em ordem inversa.
+17. Escreva um método que receba uma lista de strings e retorne a lista com todas as strings convertidas para letras maiúsculas.
+18. Implemente uma função que embaralhe aleatoriamente os elementos em uma lista.
+19. Crie um método que receba uma lista de números inteiros e retorne a média dos elementos.
+20. Escreva uma função que verifique se uma lista contém apenas números primos.
+
+Esses exercícios devem ajudar a praticar e aprimorar suas habilidades com a interface `List` em Java. Espero que isso seja útil para você!
