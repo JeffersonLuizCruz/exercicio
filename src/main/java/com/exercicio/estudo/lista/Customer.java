@@ -9,4 +9,5 @@ import lombok.Setter;
 @Getter @Setter @AllArgsConstructor
 public class Customer {
 	private Integer num;
+	private String numStr;
 }

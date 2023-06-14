@@ -1,14 +1,7 @@
 package com.exercicio.estudo.lista;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 public class Lista {
 /**
@@ -23,6 +16,7 @@ public class Lista {
 		for(Integer number : listNumber) {
 			count += number;
 		}
+		
 		return count;
 	}
 	
@@ -37,12 +31,13 @@ public class Lista {
 	}
 	
 	public static int somaTotalLambda_v3(List<Customer> listNumber) {
-		return listNumber.stream().mapToInt(Customer -> Customer.getNum()).sum();
+		return listNumber.stream().mapToInt(Customer::getNum).sum();
 	}
+	
 	public static void main(String[] args) {
 		List<Integer> numberInteger = Arrays.asList(1, 2, 3, 4, 5);
 		List<Customer> numberObject = Arrays.asList(
-				new Customer(1), new Customer(2), new Customer(3), new Customer(4)
+				new Customer(1, null), new Customer(2, null), new Customer(3, null), new Customer(4, null)
 				);
 		
 		System.out.println("Tradicional:" + somaTotal(numberInteger));
