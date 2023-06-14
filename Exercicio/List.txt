@@ -20,5 +20,6 @@ Claro! Aqui está uma lista de 20 exercícios de nível intermediário a avança
 18. Implemente uma função que embaralhe aleatoriamente os elementos em uma lista.
 19. Crie um método que receba uma lista de números inteiros e retorne a média dos elementos.
 20. Escreva uma função que verifique se uma lista contém apenas números primos.
+21. Implemente um método que receba uma lista de strings e retorne um elemento especifíco.
 
 Esses exercícios devem ajudar a praticar e aprimorar suas habilidades com a interface `List` em Java. Espero que isso seja útil para você!
