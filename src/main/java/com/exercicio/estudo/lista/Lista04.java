@@ -11,8 +11,7 @@ public class Lista04 {
 	
 	// Tradicional
 	public static Integer numIntTra(List<Integer> listNum) {
-		int max = 0;
-		
+		int max = Integer.MIN_VALUE;
 		for(Integer num : listNum) {
 			if(num > max) {
 				max = num;
