@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class List06 {
+public class Lista06 {
 
 	/**
 	 * 6. Implemente uma função que retorne o índice da primeira 
