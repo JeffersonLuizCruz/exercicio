@@ -10,7 +10,7 @@ public class Lista15 {
 	 * elemento em uma lista.
 	 * */
 	
-	public static <T> Long numOcorrenciaStr(List<String> list,String element) {
+	public static Long numOcorrenciaStr(List<String> list,String element) {
 		return list.stream()
 		.filter(obj -> obj.equals(element))
 		.count();
