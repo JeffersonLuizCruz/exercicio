@@ -1,6 +1,5 @@
 package com.exercicio.estudo.lista;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,29 +10,14 @@ public class Lista15 {
 	 * elemento em uma lista.
 	 * */
 	
-	public static <T> Long numOcorrencia(List<String> list,String element,  Class<T> classe) {
-		List<T> totalOccorencia = new ArrayList<>();
-		
-		for(Object obj : list) {
-			if(classe.isInstance(obj)) {
-				totalOccorencia.add(classe.cast(obj));
-			}
-		}
-		return totalOccorencia.stream()
+	public static <T> Long numOcorrenciaStr(List<String> list,String element) {
+		return list.stream()
 		.filter(obj -> obj.equals(element))
 		.count();
-
 	}
 	
-	public static <T> Long numOcorrencia(List<Integer> list,Integer element,  Class<T> classe) {
-		List<T> totalOccorencia = new ArrayList<>();
-		
-		for(Object obj : list) {
-			if(classe.isInstance(obj)) {
-				totalOccorencia.add(classe.cast(obj));
-			}
-		}
-		return totalOccorencia.stream()
+	public static Long numOcorrenciaInt(List<Integer> list,Integer element) {
+		return list.stream()
 		.filter(obj -> obj.equals(element))
 		.count();
 
@@ -43,7 +27,7 @@ public class Lista15 {
 		List<Integer> numberInteger = Arrays.asList(1, 2, 3, 4, 5, 5, 5);
 		List<String> listStr = Arrays.asList("Hugo","Hugo", "Jeff", "Luiz", "Jefferson", "Carol", "Oliveira");
 		
-		System.out.println(numOcorrencia(listStr, "Hugo", String.class));
-		System.out.println(numOcorrencia(numberInteger, 5, Integer.class));
+		System.out.println(numOcorrenciaStr(listStr, "Hugo"));
+		System.out.println(numOcorrenciaInt(numberInteger, 5));
 	}
 }
