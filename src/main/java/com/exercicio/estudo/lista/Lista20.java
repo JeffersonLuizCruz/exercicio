@@ -6,7 +6,7 @@ import java.util.List;
 public class Lista20 {
 
 	/**
-	 * 20. Escreva uma função que verifique se uma lista contém apenas números primos.
+	 * 20. Escreva uma função que verifique se uma lista contém apenas números ímpares.
 	 * */
 	
 	// Lambda
