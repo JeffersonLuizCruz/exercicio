@@ -5,14 +5,15 @@ import java.util.List;
 import java.util.Optional;
 
 public class Lista04 {
-/**
- * 4. Crie uma função que encontre o maior elemento em uma lista de números inteiros.
- * */
+	/**
+	 * 4. Crie uma função que encontre o maior elemento em uma lista de números
+	 * inteiros.
+	 */
 	
 	// Tradicional
-	public static Integer numIntTra(List<Integer> listNum) {
+	public static Integer findMaxTrad(List<Integer> numbers) {
 		int max = Integer.MIN_VALUE;
-		for(Integer num : listNum) {
+		for(Integer num : numbers) {
 			if(num > max) {
 				max = num;
 			}
@@ -21,24 +22,27 @@ public class Lista04 {
 	}
 	
 	// Lambda
-	public static Integer numIntLambda(List<Integer> listNum) {
-		Optional<Integer> max = listNum.stream()
+	public static Integer findMaxLamb(List<Integer> numbers) {
+		Optional<Integer> max = numbers.stream()
 				.reduce((na, nb) -> na > nb ? na : nb);
 		return max.get();
 	}
 	
-	// Lambda Meth
-	public static Integer numIntLambdaMath(List<Integer> listNum) {
-		Optional<Integer> max = listNum.stream()
+	// Lambda Math
+	public static Integer findMaxLambMath(List<Integer> numbers) {
+		Optional<Integer> max = numbers.stream()
 				.reduce((na, nb) -> Math.max(na, nb));
 		return max.get();
 	}
 	
 	public static void main(String[] args) {
-		List<Integer> numberInteger = Arrays.asList(1, 2, 300, 4, 5, 90, 10, 7);
+		List<Integer> numbers = Arrays.asList(1, 2, 300, 4, 5, 90, 10, 7);
+		Integer findMaxTrad = findMaxTrad(numbers);
+		Integer findMaxLamb = findMaxLamb(numbers);
+		Integer findMaxLambMath = findMaxLambMath(numbers);
 		
-		System.out.println(numIntTra(numberInteger));
-		System.out.println(numIntLambda(numberInteger));
-		System.out.println(numIntLambdaMath(numberInteger));
+		System.out.println("Tradicional - Maior elemento: " + findMaxTrad);
+		System.out.println("Lambda - Maior elemento: " + findMaxLamb);
+		System.out.println("Lambda Math - Maior elemento: " + findMaxLambMath);
 	}
 }

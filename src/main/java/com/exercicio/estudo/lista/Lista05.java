@@ -11,39 +11,43 @@ public class Lista05 {
 
 	/**
 	 * 5. Escreva um método que remova todos os elementos duplicados de uma lista.
-	 * */
+	 */
 	
-	// Lambda
-	public static List<String> removeDuplicate(List<String> list) {
-		return list.stream()
-				.distinct()
-				.collect(Collectors.toList());
-	}
 	
-	// Tradicional
-	public static List<String> removeDuplicateTrad(List<String> list){
+	// Tradicional - 
+	public static List<String> removeDuplicateElementTrad(List<String> elements) {
 		Set<String> unique = new HashSet<>();
-		for(String str : list) {
+		for (String str : elements) {
 			unique.add(str);
 		}
 		return unique.stream().toList();
 	}
 	
-	// Usando If
-	public static List<String> removeDuplicateWithIf(List<String> list){
+	// Tradicional
+	public static List<String> removeDuplicateElementTra(List<String> elements) {
 		List<String> unique = new ArrayList<>();
-		for(String str : list) {
-			if(!unique.contains(str)) {
+		for (String str : elements) {
+			if (!unique.contains(str)) {
 				unique.add(str);
 			}
 		}
 		return unique.stream().toList();
 	}
 	
+	// Lambda
+	public static List<String> removeDuplicateElementLamb(List<String> elements) {
+		return elements.stream().distinct().collect(Collectors.toList());
+	}
+	
 	public static void main(String[] args) {
-		List<String> listStr = Arrays.asList("Hugo", "Jeff", "Luiz", "Jefferson", "Carol", "Hugo", "Oliveira", "Jeff");
-		System.out.println(removeDuplicate(listStr));
-		System.out.println(removeDuplicateTrad(listStr));
-		System.out.println(removeDuplicateWithIf(listStr));
+		List<String> elements = Arrays.asList("Fulano", "Fulano", "Beltrano", "Maria", "Fulano", "José");
+		
+		List<String> uniqueElementTrad = removeDuplicateElementTrad(elements);
+		List<String> uniqueElementTra = removeDuplicateElementTra(elements);
+		List<String> uniqueElementLamb = removeDuplicateElementLamb(elements);
+		
+		System.out.println("Modo Tradicional V1: " + uniqueElementTrad);
+		System.out.println("Modo Tradicional V2: " + uniqueElementTra);
+		System.out.println("Usando Lambda: " + uniqueElementLamb);
 	}
 }

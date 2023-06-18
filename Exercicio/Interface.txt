@@ -1,0 +1,23 @@
+Claro! Aqui estão 10 exercícios práticos em Java sobre interfaces:
+
+1. Crie uma interface `Animal` com o método `void sound()`. Em seguida, crie as classes `Dog` e `Cat` que implementam a interface `Animal` e implemente o método `sound()` para exibir diferentes sons para cada animal.
+
+2. Crie uma interface `Shape` com o método `double calculateArea()`. Em seguida, crie as classes `Circle` e `Rectangle` que implementam a interface `Shape` e implemente o método `calculateArea()` para calcular a área de cada forma.
+
+3. Crie uma interface `Drawable` com o método `void draw()`. Em seguida, crie a classe abstrata `Shape` que implementa a interface `Drawable` e tenha as subclasses `Circle` e `Rectangle` que estendem a classe `Shape` e implementam o método `draw()` para desenhar cada forma.
+
+4. Crie uma interface `Sortable` com o método `void sort()`. Em seguida, crie uma classe `ArraySorter` que possui um método `sortArray()` que recebe um array de inteiros e implementa a interface `Sortable` para ordenar o array.
+
+5. Crie uma interface `Resizable` com o método `void resize(double factor)`. Em seguida, crie uma classe `Rectangle` que implementa a interface `Resizable` e implemente o método `resize()` para redimensionar o retângulo de acordo com o fator fornecido.
+
+6. Crie uma interface `Logger` com os métodos `void logInfo(String message)`, `void logWarning(String message)` e `void logError(String message)`. Em seguida, crie uma classe `FileLogger` que implementa a interface `Logger` e implemente os métodos para gravar as mensagens em um arquivo de log.
+
+7. Crie uma interface `Searchable` com o método `boolean search(String keyword)`. Em seguida, crie uma classe `TextFile` que implementa a interface `Searchable` e implemente o método `search()` para procurar uma palavra-chave em um arquivo de texto.
+
+8. Crie uma interface `Database` com os métodos `void connect()`, `void executeQuery(String query)` e `void closeConnection()`. Em seguida, crie uma classe `MySQLDatabase` que implementa a interface `Database` e implemente os métodos para conectar-se a um banco de dados MySQL, executar consultas e fechar a conexão.
+
+9. Crie uma interface `Runnable` com o método `void run()`. Em seguida, crie a classe `Thread` que implementa a interface `Runnable` e implemente o método `run()` para executar uma determinada tarefa em uma thread separada.
+
+10. Crie uma interface `Authentication` com o método `boolean authenticate(String username, String password)`. Em seguida, crie uma classe `DatabaseAuthentication` que implementa a interface `Authentication` e implemente o método `authenticate()` para autenticar um usuário em um banco de dados.
+
+Esses exercícios práticos sobre interfaces em Java podem ajudar a reforçar o entendimento e a aplicação de conceitos importantes relacionados a interfaces e suas implementações.

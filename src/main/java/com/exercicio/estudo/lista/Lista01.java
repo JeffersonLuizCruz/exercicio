@@ -4,44 +4,38 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Lista01 {
-/**
- * 1. Crie um método que receba uma lista de números inteiros 
- * 	  e retorne a soma de todos os elementos.
- * */
+	/**
+	 * 1. Crie um método que receba uma lista de números inteiros e retorne a soma
+	 * de todos os elementos.
+	 */
 	
 	// Tradicional
-	public static Integer somaTotal(List<Integer> listNumber) {
-		Integer count = 0;
-		
-		for(Integer number : listNumber) {
-			count += number;
+	public static Integer calculateSumTra(List<Integer> numbers) {
+		Integer sum = 0;
+		for(Integer number : numbers) {
+			sum += number;
 		}
-		
-		return count;
+		return sum;
 	}
 	
 	// Método de Referência
-	public static int somaTotalReference_v1(List<Integer> listNumber) {
-		return listNumber.stream().mapToInt(Integer::intValue).sum();
+	public static int calculateSumMR(List<Integer> numbers) {
+		return numbers.stream().mapToInt(Integer::intValue).sum();
 	}
 	
 	// Lambda
-	public static int somaTotalLambda_v2(List<Integer> listNumber) {
-		return listNumber.stream().mapToInt(num -> num).sum();
+	public static int calculateSumLamb(List<Integer> numbers) {
+		return numbers.stream().mapToInt(num -> num).sum();
 	}
-	
-	public static int somaTotalLambda_v3(List<Customer> listNumber) {
-		return listNumber.stream().mapToInt(Customer::getNum).sum();
-	}
-	
-	public static void main(String[] args) {
-		List<Integer> numberInteger = Arrays.asList(1, 2, 3, 4, 5);
-		List<Customer> numberObject = Arrays.asList(
-				new Customer(1, null), new Customer(2, null), new Customer(3, null), new Customer(4, null)
-				);
 		
-		System.out.println("Tradicional:" + somaTotal(numberInteger));
-		System.out.println("Referência:" + somaTotalReference_v1(numberInteger));
-		System.out.println("Lambda:" + somaTotalLambda_v3(numberObject));
+	public static void main(String[] args) {
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);	
+        int sumTra = calculateSumTra(numbers);
+        int sumMR = calculateSumMR(numbers);
+        int sumLamb = calculateSumLamb(numbers);
+        
+        System.out.println("Tradicional - A soma dos números é: " + sumTra);
+        System.out.println("Método de Referência - A soma dos números é: " + sumMR);
+        System.out.println("Lambda - A soma dos números é: " + sumLamb);
 	}
 }

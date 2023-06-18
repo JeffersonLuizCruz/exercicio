@@ -7,18 +7,21 @@ import java.util.List;
 public class Lista03 {
 
 	/**
-	 * 3. Implemente um método que receba uma lista de strings e retorne uma nova lista 
-	 * 	  com todas as strings em ordem alfabética.
-	 * */
+	 * 3. Implemente um método que receba uma lista de strings e retorne uma nova
+	 * lista com todas as strings em ordem alfabética.
+	 */
 	
-	public static List<String> sortStr(List<String> list){
-		Collections.sort(list);
-		return list;
+	// Não reinvente a roda. Use a classe utilitária Collections.
+	public static List<String> sort(List<String> strings){
+		Collections.sort(strings);
+		return strings;
 	}
 	
 	public static void main(String[] args) {
-		List<String> listStr = Arrays.asList("Hugo", "Jeff", "Luiz", "Jefferson", "Carol", "Oliveira", "Ana");
+		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
+		List<String> newSortedString = sort(strings);
 		
-		System.out.println(sortStr(listStr));
+		System.out.println("Lista original: " + strings);
+		System.out.println("Nova lista modificada: " + newSortedString);
 	}
 }

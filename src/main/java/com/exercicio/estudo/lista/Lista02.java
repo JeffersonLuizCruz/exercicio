@@ -6,19 +6,22 @@ import java.util.List;
 
 public class Lista02 {
 
-/**
- * 02. Escreva uma função que inverta a ordem dos elementos em uma lista.
- * */
+	/**
+	 * 02. Escreva uma função que inverta a ordem e ordene os elementos string em uma lista.
+	 */
 	
-	public static List<String> invert(List<String> list) {
-		Collections.reverse(list);
-		Collections.sort(list);
-		return list;
+	// Não reinvente a roda. Use a classe utilitária Collections.
+	public static List<String> reverseAndSort(List<String> strings) {
+		Collections.reverse(strings);
+		Collections.sort(strings);
+		return strings;
 		}
 	
 	public static void main(String[] args) {
-		List<String> listStr = Arrays.asList("Hugo", "Jeff", "Luiz", "Jefferson", "Carol", "Oliveira");
+		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
+		List<String> listReverseAndSort = reverseAndSort(strings);
 		
-		System.out.println(invert(listStr));
+		System.out.println("Elementos originais: " + strings);
+		System.out.println("Elementos invertidos e ordenados: " + listReverseAndSort);
 	}
 }
