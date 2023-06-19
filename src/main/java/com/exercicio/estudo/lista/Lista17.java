@@ -7,29 +7,28 @@ import java.util.List;
 public class Lista17 {
 
 	/**
-	 * 17. Escreva um método que receba uma lista de strings e retorne a 
-	 * lista com todas as strings convertidas para letras maiúsculas.
-	 * */
+	 * 17. Escreva um método que receba uma lista de strings e retorne a lista com
+	 * todas as strings convertidas para letras maiúsculas.
+	 */
 	
-	//Lambda
-	public static List<String> upCaseStr(List<String> list){
+	// Exemplo: V1
+	public static List<String> transformToUpperCaseV1(List<String> list){
 		return list.stream().map(String::toUpperCase).toList();
 	}
 	
-	// Tradicional
-	
-	public static List<String> upCaseStrTr(List<String> list){
+	// Exemplo: V2
+	public static List<String> transformToUpperCaseV2(List<String> list){
 		List<String> newStr = new ArrayList<>();
 		for(String str: list) {
 			newStr.add(str.toUpperCase());
 		}
-		
 		return newStr;
 	}
 	
 	public static void main(String[] args) {
-		List<String> listStr = Arrays.asList("Hugo", "Jeff", "Luiz", "Jefferson", "Carol", "Oliveira", "Ana");
-		System.out.println(upCaseStr(listStr));
-		System.out.println(upCaseStrTr(listStr));
+		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
+		
+		System.out.println(transformToUpperCaseV1(strings));
+		System.out.println(transformToUpperCaseV2(strings));
 	}
 }

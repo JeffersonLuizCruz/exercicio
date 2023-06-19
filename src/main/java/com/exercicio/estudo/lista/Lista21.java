@@ -1,34 +1,42 @@
 package com.exercicio.estudo.lista;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
-/**
- * 21. Implemente um método que receba
- * 	   uma lista de strings e retorne um elemento especifíco.
- * */
+
 public class Lista21 {
-
-	// Busca binária
-	public static String searchBinary(List<String> list, String name){
+	/**
+	 * 21. Implemente um método que receba uma lista de strings e retorne um
+	 * elemento especifíco.
+	 */
+	
+	
+	// Exemplo: V1
+	public static String searchV1(List<String> strings, String name) {
+		List<String> newStrings = new ArrayList<>(strings);
+		List<String> list = newStrings.stream().map(String::toLowerCase).collect(Collectors.toList());
 		Collections.sort(list);
-		int binarySearch = Collections.binarySearch(list, name);
-		if(binarySearch >= 0) {
+		int binarySearch = Collections.binarySearch(list, name.toLowerCase());
+		
+		if (binarySearch >= 0) {
 			return name;
-		}else {
-			return "Não encontrado";
+		} else {
+			return "Not Found";
 		}
 	}
-	
-	// Busca por filtro
-	public static String searchFilter(List<String> list, String name) {
-		return list.stream().filter(str -> str.equals(name)).findFirst().orElse("Não encontrado");
+
+	// Exemplo: V2
+	public static String searchV2(List<String> strings, String name) {
+		return strings.stream().filter(str -> str.equalsIgnoreCase(name)).findFirst().orElse("Not Found");
 	}
+
 	public static void main(String[] args) {
-		List<String> listStr = Arrays.asList("Hugo", "Jeff", "Luiz", "Jefferson", "Carol", "Oliveira");
-		
-		System.out.println(searchBinary(listStr,"Hugo"));
-		System.out.println(searchFilter(listStr, "Hugo"));
+		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
+
+		System.out.println(searchV1(strings, "josé"));
+		System.out.println(searchV2(strings, "ciclano"));
 	}
 }

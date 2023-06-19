@@ -11,10 +11,10 @@ public class Lista12 {
 	 */
 	
 	// Exemplo: V1
-	public static Integer countStr(List<String> list) {
-		Integer count = 1;
-		for(String str : list) {
-			if(str.startsWith("a")) {
+	public static Integer totalStrV1(List<String> strings) {
+		Integer count = 0;
+		for(String str : strings) {
+			if(str.toUpperCase().startsWith("A".toUpperCase())) {
 				count++;
 			}
 		}
@@ -22,14 +22,14 @@ public class Lista12 {
 	}
 	
 	// Exemplo: V2
-	public static long countStrLambda(List<String> list) {
-		return list.stream().filter(str -> str.toUpperCase().startsWith("A")).count();
+	public static long totalStrV2(List<String> strings) {
+		return strings.stream().filter(str -> str.toUpperCase().startsWith("A".toUpperCase())).count();
 	}
 	
 	public static void main(String[] args) {
-		List<String> listA = Arrays.asList("Jefferson", "Carol", "Oliveira", "Ana");
+		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
 		
-		System.out.println(countStr(listA));
-		System.out.println(countStrLambda(listA));
+		System.out.println(totalStrV1(strings));
+		System.out.println(totalStrV2(strings));
 	}
 }
