@@ -27,7 +27,7 @@ public class Lista12 {
 	}
 	
 	public static void main(String[] args) {
-		List<String> listA = Arrays.asList("aJefferson", "Carol", "Oliveira", "Ana");
+		List<String> listA = Arrays.asList("Jefferson", "Carol", "Oliveira", "Ana");
 		
 		System.out.println(countStr(listA));
 		System.out.println(countStrLambda(listA));
