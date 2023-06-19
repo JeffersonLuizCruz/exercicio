@@ -8,33 +8,36 @@ import java.util.stream.Collectors;
 public class Lista11 {
 
 	/**
-	 * 11. Escreva um método que receba duas listas de 
-	 * números inteiros e retorne uma nova lista contendo os elementos comuns 
-	 * às duas listas.
-	 * */
+	 * 11. Escreva um método que receba duas listas de números inteiros e retorne
+	 * uma nova lista contendo os elementos comuns às duas listas.
+	 */
 	
-	// Lambda
-	public static List<String> listMatch(List<String> listA, List<String> listB){
-		return listA.stream()
+	// Exemplo: V1
+	public static List<String> listMatchV1(List<String> listA, List<String> listB){
+		List<String> matchStrings = listA.stream()
 		.filter(a -> listB.contains(a))
 		.collect(Collectors.toList());
+		
+		List<String> newlist = new ArrayList<>(matchStrings);
+		return newlist;
 	}
 	
-	public static List<String> listMatchTrad(List<String> listA, List<String> listB){
-		List<String> str = new ArrayList<>();
+	// Exemplo: V2
+	public static List<String> listMatchV2(List<String> listA, List<String> listB){
+		List<String> strings = new ArrayList<>();
 		for(String a : listA) {
 			if(listB.contains(a)){
-				str.add(a);
+				strings.add(a);
 			}
 		}
-		return str;
+		return strings;
 	}
 	
 	public static void main(String[] args) {
 		List<String> listA = Arrays.asList("Jefferson", "Carol", "Oliveira", "Ana");
 		List<String> listB = Arrays.asList("Hugo", "Jeff", "Luiz", "Jefferson",  "Ana");
 
-		System.out.println(listMatch(listA, listB));
-		System.out.println(listMatchTrad(listA, listB));
+		System.out.println(listMatchV1(listA, listB));
+		System.out.println(listMatchV2(listA, listB));
 	}
 }

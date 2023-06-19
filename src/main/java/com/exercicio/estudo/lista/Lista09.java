@@ -7,30 +7,30 @@ import java.util.stream.Collectors;
 public class Lista09 {
 
 	/**
-	 * Implemente um método que remova todos os elementos ímpares 
-	 * de uma lista de números inteiros.
-	 * */
+	 * Implemente um método que remova todos os elementos ímpares de uma lista de
+	 * números inteiros.
+	 */
 	
-	// Lambda
-	public static List<Integer> removerImpar(List<Integer> list) {
-		return list.stream().filter(n1 -> (n1 % 2) == 0)
+	// Exemplo: V1
+	public static List<Integer> removeOddNumbersV1(List<Integer> numbers) {
+		return numbers.stream().filter(n1 -> (n1 % 2) == 0)
 		.collect(Collectors.toList());
 	}
 	
-	// Tradicional
-	public static List<Integer> removerImparTra(List<Integer> list){
-		List<Integer> par = new ArrayList<>();
-		for(Integer num : list) {
+	// Exemplo: V2
+	public static List<Integer> removeOddNumbersV2(List<Integer> numbers){
+		List<Integer> even = new ArrayList<>();
+		for(Integer num : numbers) {
 			if((num % 2) == 0) {
-				par.add(num);
+				even.add(num);
 			}
 		}
-		return par;
+		return even;
 	}
 	
 	public static void main(String[] args) {
-        List<Integer> numbers1 = List.of(1, 2, 3, 4, 5);
-        System.out.println(removerImpar(numbers1));
-        System.out.println(removerImparTra(numbers1));
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5);
+        System.out.println(removeOddNumbersV1(numbers));
+        System.out.println(removeOddNumbersV2(numbers));
 	}
 }

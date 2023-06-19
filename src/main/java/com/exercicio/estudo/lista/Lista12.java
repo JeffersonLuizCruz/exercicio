@@ -6,11 +6,11 @@ import java.util.List;
 public class Lista12 {
 
 	/**
-	 * 12. Implemente uma função que receba uma lista de 
-	 * 		strings e retorne a quantidade de strings que começam com a letra "A".
-	 * */
+	 * 12. Implemente uma função que receba uma lista de strings e retorne a
+	 * quantidade de strings que começam com a letra "A".
+	 */
 	
-	// Tradicional
+	// Exemplo: V1
 	public static Integer countStr(List<String> list) {
 		Integer count = 1;
 		for(String str : list) {
@@ -21,7 +21,7 @@ public class Lista12 {
 		return count;
 	}
 	
-	// Lambda
+	// Exemplo: V2
 	public static long countStrLambda(List<String> list) {
 		return list.stream().filter(str -> str.toUpperCase().startsWith("A")).count();
 	}

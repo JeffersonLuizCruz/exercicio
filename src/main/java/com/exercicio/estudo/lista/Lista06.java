@@ -11,8 +11,8 @@ public class Lista06 {
 	 * elemento string em uma lista.
 	 */
 	
-	// Tradicional
-	public static Integer fastIndexTrad(List<String> strings, String element) {
+	// Exemplo: V1
+	public static Integer fastIndexV1(List<String> strings, String element) {
 		for (int i = 0; i < strings.size(); i++) {
 			if (strings.get(i).equalsIgnoreCase(element)) {
 				return i;
@@ -21,16 +21,16 @@ public class Lista06 {
 		return -1;
 	}
 	
-	// Lambda
-	public static int findIndexLambA(List<String> strings, String element) {
+	// Exemplo: V2
+	public static int findIndexV2(List<String> strings, String element) {
 		List<String> listLowerCase = strings.stream().map(String::toLowerCase).toList();
 		return listLowerCase.indexOf(element.toLowerCase());
 	}
 	
-	// Lambda
-	public static int findIndexLambB(List<String> strings, String element) {
+	// Exemplo: V3
+	public static int findIndexV3(List<String> strings, String element) {
 		return IntStream.range(0, strings.size())
-		.filter(i -> strings.get(i).equals(element))
+		.filter(i -> strings.get(i).equalsIgnoreCase(element))
 		.findFirst().orElse(-1);
 	}
 			
@@ -38,17 +38,17 @@ public class Lista06 {
 		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
 		
 		String elementoA = "fulano";
-		Integer indexTrd = fastIndexTrad(strings, elementoA);
+		Integer indexV1 = fastIndexV1(strings, elementoA);
 		
 		String elementoB = "beltrano";
-		int findIndex = findIndexLambA(strings, elementoB);
+		int findIndexV2 = findIndexV2(strings, elementoB);
 		
-		String elementoC = "Ciclano";
-		int indexLamb = findIndexLambB(strings, elementoC);
+		String elementoC = "ciclano";
+		int indexV3 = findIndexV3(strings, elementoC);
 		
-		System.out.println("Modo Tradicional - Index do elemento '" + elementoA + "' na posição: " + indexTrd);
-		System.out.println("Lambda - Index do elemento '" + elementoB + "' na posição: " + findIndex);
-		System.out.println("Modo Tradicional - Index do elemento '" + elementoC + "' na posição: " + indexLamb);
+		System.out.println("Modo Tradicional - Index do elemento '" + elementoA + "' na posição: " + indexV1);
+		System.out.println("Método de Referência - Index do elemento '" + elementoB + "' na posição: " + findIndexV2);
+		System.out.println("Modo Tradicional - Index do elemento '" + elementoC + "' na posição: " + indexV3);
 	}
 	
 

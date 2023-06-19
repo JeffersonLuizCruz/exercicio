@@ -14,8 +14,8 @@ public class Lista05 {
 	 */
 	
 	
-	// Tradicional - 
-	public static List<String> removeDuplicateElementTrad(List<String> elements) {
+	// Exemplo: V1
+	public static List<String> removeDuplicateElementV1(List<String> elements) {
 		Set<String> unique = new HashSet<>();
 		for (String str : elements) {
 			unique.add(str);
@@ -23,8 +23,8 @@ public class Lista05 {
 		return unique.stream().toList();
 	}
 	
-	// Tradicional
-	public static List<String> removeDuplicateElementTra(List<String> elements) {
+	// Exemplo: V2
+	public static List<String> removeDuplicateElementV2(List<String> elements) {
 		List<String> unique = new ArrayList<>();
 		for (String str : elements) {
 			if (!unique.contains(str)) {
@@ -34,20 +34,20 @@ public class Lista05 {
 		return unique.stream().toList();
 	}
 	
-	// Lambda
-	public static List<String> removeDuplicateElementLamb(List<String> elements) {
+	// Exemplo: V3
+	public static List<String> removeDuplicateElementV3(List<String> elements) {
 		return elements.stream().distinct().collect(Collectors.toList());
 	}
 	
 	public static void main(String[] args) {
 		List<String> elements = Arrays.asList("Fulano", "Fulano", "Beltrano", "Maria", "Fulano", "José");
 		
-		List<String> uniqueElementTrad = removeDuplicateElementTrad(elements);
-		List<String> uniqueElementTra = removeDuplicateElementTra(elements);
-		List<String> uniqueElementLamb = removeDuplicateElementLamb(elements);
+		List<String> uniqueElementV1 = removeDuplicateElementV1(elements);
+		List<String> uniqueElementV2 = removeDuplicateElementV2(elements);
+		List<String> uniqueElementV3 = removeDuplicateElementV3(elements);
 		
-		System.out.println("Modo Tradicional V1: " + uniqueElementTrad);
-		System.out.println("Modo Tradicional V2: " + uniqueElementTra);
-		System.out.println("Usando Lambda: " + uniqueElementLamb);
+		System.out.println("Modo Tradicional V1: " + uniqueElementV1);
+		System.out.println("Modo Tradicional V2: " + uniqueElementV2);
+		System.out.println("Usando Lambda: " + uniqueElementV3);
 	}
 }

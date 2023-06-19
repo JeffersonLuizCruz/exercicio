@@ -8,38 +8,40 @@ import java.util.stream.Collectors;
 public class Lista07 {
 
 	/**
-	 * 7. Crie um método que receba uma lista de números inteiros e retorne 
-	 * uma nova lista com todos os elementos elevados ao quadrado.
-	 * */
+	 * 7. Crie um método que receba uma lista de números inteiros e retorne uma nova
+	 * lista com todos os elementos elevados ao quadrado.
+	 */
 	
-	// Tradicional
-	public static List<Integer> numInt(List<Integer> list){
-		List<Integer> listQuadrado = new ArrayList<>();
-		Integer quadrado = null;
+	// Exemplo: V1
+	public static List<Integer> squareListElementsV1(List<Integer> list){
+		List<Integer> squareList = new ArrayList<>();
+		Integer square = null;
 		for(Integer num : list) {
-			quadrado = num * num;
-			listQuadrado.add(quadrado);
+			square = num * num;
+			squareList.add(square);
 		}
-		return listQuadrado;
+		return squareList;
 	}
 	
-	// Lambda
-	public static List<Integer> numIntLambda(List<Integer> list){
+	// Exemplo: V2
+	public static List<Integer> squareListElementsV2(List<Integer> list){
 		return list.stream()
 				.mapToInt(num -> num * num)
 				.boxed() // Converte IntStream para Stream<Integer>
 				.collect(Collectors.toList());
 	}
 	
-	public static List<Integer> squareListElements(List<Integer> numbers) {
+	// Exemplo: V3
+	public static List<Integer> squareListElementsV3(List<Integer> numbers) {
         return numbers.stream()
                 .map(number -> number * number)
                 .collect(Collectors.toList());
     }
 	
 	public static void main(String[] args) {
-		List<Integer> listNum = Arrays.asList(1, 2, 3, 4, 5);
-		System.out.println(numInt(listNum));
-		System.out.println(squareListElements(listNum));
+		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+		
+		System.out.println(squareListElementsV1(numbers));
+		System.out.println(squareListElementsV2(numbers));
 	}
 }

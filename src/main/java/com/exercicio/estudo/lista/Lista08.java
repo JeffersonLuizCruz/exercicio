@@ -6,8 +6,9 @@ import java.util.stream.IntStream;
 public class Lista08 {
 
 	/**
-	 * 8. Escreva uma função que verifique se uma lista está ordenada em ordem crescente.
-	 * */
+	 * 8. Escreva uma função que verifique se uma lista está ordenada em ordem
+	 * crescente.
+	 */
 	
 	public static boolean isListOrdered(List<Integer> list) {
 		return IntStream.range(0, list.size() -1)
@@ -15,7 +16,6 @@ public class Lista08 {
 	}
 	
 	public static void main(String[] args) {
-        List<Integer> numbers1 = List.of(1, 2, 3, 4, 5);
         List<Integer> numbers2 = List.of(1, 3, 2, 4, 5);
         
         System.out.println(isListOrdered(numbers2));

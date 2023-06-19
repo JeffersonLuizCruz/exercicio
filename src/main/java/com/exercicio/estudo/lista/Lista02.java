@@ -1,5 +1,6 @@
 package com.exercicio.estudo.lista;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -12,9 +13,12 @@ public class Lista02 {
 	
 	// Não reinvente a roda. Use a classe utilitária Collections.
 	public static List<String> reverseAndSort(List<String> strings) {
-		Collections.reverse(strings);
-		Collections.sort(strings);
-		return strings;
+		// O uso da Collections modifica a lista original durante o processo de ordenação. Por isso
+		// é necessário criar uma nova lista.
+		List<String> newlist = new ArrayList<>(strings);
+		Collections.reverse(newlist); 
+		Collections.sort(newlist); 
+		return newlist;
 		}
 	
 	public static void main(String[] args) {
