@@ -10,7 +10,7 @@ public class Execute {
 		
 		// Ex: V2 - Herança e sem Polimorfismo
 		Cachorro cachorroInstance = new Cachorro();
-		cachorroInstance.fazSom(); // Uso de herança
+		cachorroInstance.fazSom(); // Método de herança
 		cachorroInstance.emitirSomCachorro(); // Método de instância de objeto. Sem Herença e Polimorfismo
 		cachorroInstance.tipoAnimal();// Método de instância de objeto. Sem Herença e Polimorfismo
 		
@@ -23,7 +23,7 @@ public class Execute {
 
 		// Ex: V2 - Herança e sem Polimorfismo
 		Gato gatoInstance = new Gato();
-		gatoInstance.fazSom(); // Uso de herança
+		gatoInstance.fazSom(); // Método de herança
 		gatoInstance.emitirSomGato(); // Método de instância de objeto. Sem Herença e Polimorfismo
 		gatoInstance.tipoAnimal();// Método de instância de objeto. Sem Herença e Polimorfismo
 
