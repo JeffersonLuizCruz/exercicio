@@ -40,7 +40,7 @@ public class Lista07 {
 	
 	public static void main(String[] args) {
 		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-		
+		// teste
 		System.out.println(squareListElementsV1(numbers));
 		System.out.println(squareListElementsV2(numbers));
 	}
