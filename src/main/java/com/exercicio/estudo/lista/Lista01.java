@@ -1,7 +1,9 @@
 package com.exercicio.estudo.lista;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Lista01 {
 	/**
@@ -27,15 +29,21 @@ public class Lista01 {
 	public static int calculateSumV3(List<Integer> numbers) {
 		return numbers.stream().mapToInt(num -> num).sum();
 	}
-		
+	
+	// Exemplo: V4
+	public static IntSummaryStatistics calculateSumV4(List<Integer> numbers) {
+		return numbers.stream().collect(Collectors.summarizingInt(e -> e));
+	}
 	public static void main(String[] args) {
 		List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);	
         int sumV1 = calculateSumV1(numbers);
         int sumV2 = calculateSumV2(numbers);
         int sumV3 = calculateSumV3(numbers);
+        IntSummaryStatistics sumV4 = calculateSumV4(numbers);
         
         System.out.println("Tradicional - A soma dos números é: " + sumV1);
         System.out.println("Método de Referência - A soma dos números é: " + sumV2);
         System.out.println("Lambda - A soma dos números é: " + sumV3);
+        System.out.println("Lambda - A soma dos números é: " + sumV4.getSum());
 	}
 }

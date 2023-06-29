@@ -2,6 +2,7 @@ package com.exercicio.estudo.lista;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 public class Lista06 {
@@ -33,6 +34,15 @@ public class Lista06 {
 		.filter(i -> strings.get(i).equalsIgnoreCase(element))
 		.findFirst().orElse(-1);
 	}
+	
+	// Exemplo: V4
+	public static int findIndexV4(List<String> strings, String element) {
+		Optional<Integer> map = strings.stream()
+				.filter(n -> n.equalsIgnoreCase(element))
+				.findFirst()
+				.map(strings::indexOf);
+		return map.orElse(-1);
+	}
 			
 	public static void main(String[] args) {
 		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
@@ -41,14 +51,18 @@ public class Lista06 {
 		Integer indexV1 = fastIndexV1(strings, elementoA);
 		
 		String elementoB = "beltrano";
-		int findIndexV2 = findIndexV2(strings, elementoB);
+		int indexV2 = findIndexV2(strings, elementoB);
 		
 		String elementoC = "ciclano";
 		int indexV3 = findIndexV3(strings, elementoC);
 		
-		System.out.println("Modo Tradicional - Index do elemento '" + elementoA + "' na posição: " + indexV1);
-		System.out.println("Método de Referência - Index do elemento '" + elementoB + "' na posição: " + findIndexV2);
-		System.out.println("Modo Tradicional - Index do elemento '" + elementoC + "' na posição: " + indexV3);
+		String elementoD = "Fulano";
+		long indexV4 = findIndexV4(strings, elementoD);
+		
+		System.out.println("indexV1 - Index do elemento '" + elementoA + "' na posição: " + indexV1);
+		System.out.println("indexV2 - Index do elemento '" + elementoB + "' na posição: " + indexV2);
+		System.out.println("indexV3 - Index do elemento '" + elementoC + "' na posição: " + indexV3);
+		System.out.println("indexV4 - Index do elemento '" + elementoD + "' na posição: " + indexV4);
 	}
 	
 

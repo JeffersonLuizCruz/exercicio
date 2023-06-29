@@ -8,7 +8,8 @@ import java.util.List;
 public class Lista02 {
 
 	/**
-	 * 02. Escreva uma função que inverta a ordem e ordene os elementos string em uma lista.
+	 * 02. Escreva uma função que inverta a ordem e ordene os elementos string em
+	 * uma lista.
 	 */
 	
 	// Não reinvente a roda. Use a classe utilitária Collections.

@@ -1,8 +1,11 @@
 package com.exercicio.estudo.lista;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Lista04 {
 	/**
@@ -35,14 +38,29 @@ public class Lista04 {
 		return max.get();
 	}
 	
+	// Exemplo: V4
+	public static int findMaxV4(List<Integer> numbers) {
+		Optional<Integer> max = numbers.stream().collect(Collectors.maxBy(Comparator.naturalOrder()));
+		return max.orElse(-1);
+	}
+	
+	// Exemplo: V5
+	public static IntSummaryStatistics findMaxV5(List<Integer> numbers) {
+		IntSummaryStatistics max = numbers.stream().collect(Collectors.summarizingInt(Integer::intValue));
+		return max;
+	}
 	public static void main(String[] args) {
 		List<Integer> numbers = Arrays.asList(1, 2, 300, 4, 5, 90, 10, 7);
-		Integer findMaxTrad = findMaxV1(numbers);
-		Integer findMaxLamb = findMaxV2(numbers);
-		Integer findMaxLambMath = findMaxV3(numbers);
+		Integer v1 = findMaxV1(numbers);
+		Integer v2 = findMaxV2(numbers);
+		Integer v3 = findMaxV3(numbers);
+		Integer v4 = findMaxV4(numbers);
+		IntSummaryStatistics v5 = findMaxV5(numbers);
 		
-		System.out.println("Exemplo V1 - Maior elemento: " + findMaxTrad);
-		System.out.println("Exemplo V2 - Maior elemento: " + findMaxLamb);
-		System.out.println("Exemplo V3 - Maior elemento: " + findMaxLambMath);
+		System.out.println("Exemplo V1 - Maior elemento: " + v1);
+		System.out.println("Exemplo V2 - Maior elemento: " + v2);
+		System.out.println("Exemplo V3 - Maior elemento: " + v3);
+		System.out.println("Exemplo V4 - Maior elemento: " + v4);
+		System.out.println("Exemplo V5 - Maior elemento: " + v5.getMax());
 	}
 }
