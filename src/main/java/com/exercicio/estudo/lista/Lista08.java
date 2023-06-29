@@ -19,5 +19,6 @@ public class Lista08 {
         List<Integer> numbers2 = List.of(1, 3, 2, 4, 5);
         
         System.out.println(isListOrdered(numbers2));
+        
 	}
 }

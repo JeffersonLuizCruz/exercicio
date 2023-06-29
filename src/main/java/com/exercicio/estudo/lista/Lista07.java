@@ -13,10 +13,10 @@ public class Lista07 {
 	 */
 	
 	// Exemplo: V1
-	public static List<Integer> squareListElementsV1(List<Integer> list){
+	public static List<Integer> squareListElementsV1(List<Integer> numbers){
 		List<Integer> squareList = new ArrayList<>();
 		Integer square = null;
-		for(Integer num : list) {
+		for(Integer num : numbers) {
 			square = num * num;
 			squareList.add(square);
 		}
@@ -24,8 +24,8 @@ public class Lista07 {
 	}
 	
 	// Exemplo: V2
-	public static List<Integer> squareListElementsV2(List<Integer> list){
-		return list.stream()
+	public static List<Integer> squareListElementsV2(List<Integer> numbers){
+		return numbers.stream()
 				.mapToInt(num -> num * num)
 				.boxed() // Converte IntStream para Stream<Integer>
 				.collect(Collectors.toList());
