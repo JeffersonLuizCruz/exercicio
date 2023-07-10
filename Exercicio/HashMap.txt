@@ -1,0 +1,20 @@
+Crie um HashMap vazio.
+Adicione um par chave-valor ao HashMap.
+Acesse o valor associado a uma chave específica.
+Verifique se uma chave específica está presente no HashMap.
+Remova um par chave-valor do HashMap.
+Verifique se o HashMap está vazio.
+Obtenha o número total de pares chave-valor no HashMap.
+Percorra todos os pares chave-valor do HashMap.
+Remova todos os pares chave-valor do HashMap.
+Crie um HashMap com tipo de chave e valor especificados.
+Copie todos os elementos de um HashMap para outro HashMap.
+Substitua o valor associado a uma chave específica no HashMap.
+Obtenha todas as chaves presentes no HashMap.
+Obtenha todos os valores presentes no HashMap.
+Verifique se um determinado valor está presente no HashMap.
+Obtenha uma coleção de todos os pares chave-valor no HashMap.
+Obtenha um conjunto de todas as chaves presentes no HashMap.
+Obtenha uma coleção de todos os valores presentes no HashMap.
+Verifique se o HashMap contém um determinado par chave-valor.
+Remova um par chave-valor específico do HashMap.

@@ -59,6 +59,5 @@ public class Lista11 {
 		System.out.println(listMatchV2(listA, listB));
 		System.out.println(listMatchV3(listA, listB));
 		System.out.println(listMatchV4(listA, listB));
-		
 	}
 }
