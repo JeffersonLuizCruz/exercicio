@@ -46,7 +46,7 @@ public class Lista06 {
 			
 	public static void main(String[] args) {
 		List<String> strings = Arrays.asList("Fulano", "Ciclano", "Beltrano", "Maria", "João", "José");
-		
+
 		String elementoA = "fulano";
 		Integer indexV1 = fastIndexV1(strings, elementoA);
 		
