@@ -3,6 +3,7 @@ package com.exercicio.estudo.lista;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Lista14 {
@@ -14,7 +15,7 @@ public class Lista14 {
 	
 	// Exemplo: V1
 	public static List<Integer> concatListV1(List<Integer> listA, List<Integer> listB){
-		return Stream.concat(listA.stream(), listB.stream()).toList();
+		return Stream.concat(listA.stream(), listB.stream()).collect(Collectors.toList());
 	}
 	
 	// Exemplo: V2

@@ -13,7 +13,7 @@ public class Lista10 {
 	
 	// Exemplo: V1
 	public static List<Integer> findEvenV1(List<Integer> list) {
-		return list.stream().filter(n1 -> (n1 % 2) == 0)
+		return list.stream().filter(n1 -> ((n1 % 2) == 0))
 		.collect(Collectors.toList());
 	}
 	
@@ -21,7 +21,7 @@ public class Lista10 {
 	public static List<Integer> findEvenV2(List<Integer> list){
 		List<Integer> even = new ArrayList<>();
 		for(Integer num : list) {
-			if((num % 2) == 0) {
+			if(((num % 2) == 0)) {
 				even.add(num);
 			}
 		}

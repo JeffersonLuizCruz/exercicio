@@ -24,7 +24,7 @@ public class Desafio01 {
 				impares.add(valor);
 			}
 		}
-		scanner.close();
+
 		// Ordenar a lista de números pares em ordem crescente
 		Collections.sort(pares);
 

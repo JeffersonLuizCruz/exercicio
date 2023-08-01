@@ -21,7 +21,7 @@ public class Lista19 {
 	
 	// Exemplo: V2
 	public static Double averageV2(List<Integer> numbers) {
-		double average = numbers.stream().mapToInt(Integer::intValue).average().orElseGet(() -> 0);
+		double average = numbers.stream().mapToInt(Integer::intValue).average().orElse(0);
 		return Double.valueOf(average);
 	}
 	

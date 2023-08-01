@@ -19,9 +19,9 @@ public class Lista21 {
 		List<String> newStrings = new ArrayList<>(strings);
 		List<String> list = newStrings.stream().map(String::toLowerCase).collect(Collectors.toList());
 		Collections.sort(list);
-		int binarySearch = Collections.binarySearch(list, name.toLowerCase());
+		int index = Collections.binarySearch(list, name.toLowerCase());
 		
-		if (binarySearch >= 0) {
+		if (index >= 0) {
 			return name;
 		} else {
 			return "Not Found";
