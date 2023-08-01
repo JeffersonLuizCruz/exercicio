@@ -49,6 +49,7 @@ public class Lista04 {
 		IntSummaryStatistics max = numbers.stream().collect(Collectors.summarizingInt(Integer::intValue));
 		return max;
 	}
+	
 	public static void main(String[] args) {
 		List<Integer> numbers = Arrays.asList(1, 2, 300, 4, 5, 90, 10, 7);
 		Integer v1 = findMaxV1(numbers);
