@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Vetor {
 	private String[] elementos;
-	private int tamanho;
+	private int tamanho = 0;
 	
 	public Vetor(int tamanho) {
 		this.elementos = new String[tamanho];
@@ -21,12 +21,33 @@ public class Vetor {
 	}
 	
 	public boolean adicionaAprimorado(String elemento) {
-//		if(this.tamanho < this.elementos.length) {
-//			this.elementos[this.tamanho] = elemento;
-//			this.tamanho ++;
-//		}
-		this.elementos[this.tamanho] = elemento;
-		this.tamanho ++;
+		if(this.tamanho < this.elementos.length) {
+			this.elementos[this.tamanho] = elemento;
+			this.tamanho ++;
+		}
 		return false;
+	}
+	
+	public int tamanho() {
+		if(this.tamanho >= 0) {
+			return this.tamanho;
+		}
+		return -1;
+	}
+	
+	public int buscarIndex(String elemento) {
+		for(int i = 0; i < this.tamanho; i++) {
+			if(this.elementos[i].equals(elemento)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public String busca(int index) {
+		if(index < this.tamanho) {
+			return this.elementos[index];
+		}
+		return "-1";
 	}
 }

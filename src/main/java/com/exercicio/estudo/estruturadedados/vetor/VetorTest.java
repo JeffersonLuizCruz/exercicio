@@ -3,11 +3,12 @@ package com.exercicio.estudo.estruturadedados.vetor;
 public class VetorTest {
 
 	public static void main(String[] args) {
-		Vetor vetor = new Vetor(3);
+		Vetor vetor = new Vetor(2);
 		vetor.adicionaAprimorado("Hugo");
 		vetor.adicionaAprimorado("Jeff");
-		vetor.adicionaAprimorado("Luiz");
-		vetor.adicionaAprimorado("Cruz");
-		System.out.println(vetor);
+		
+//		System.out.println(vetor.buscarIndex("Hugo"));
+		System.out.println(vetor.busca(8));
+		
 	}
 }
