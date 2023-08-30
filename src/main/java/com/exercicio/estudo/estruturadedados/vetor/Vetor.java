@@ -44,10 +44,32 @@ public class Vetor {
 		return -1;
 	}
 	
-	public String busca(int index) {
-		if(index < this.tamanho) {
-			return this.elementos[index];
+	public String busca(int posicao) {
+		if(!(posicao >= 0 && posicao < this.tamanho)) {
+			throw new IllegalArgumentException("Posição inválida.");
 		}
-		return "-1";
+		return this.elementos[posicao];
+	}
+	
+	// ToDo
+	public boolean update(int posicao, String elemento) {
+		if(!(posicao >= 0 && posicao < this.tamanho)) {
+			throw new IllegalArgumentException("Posição inválida.");
+		}
+		
+		for(int i = this.tamanho - 1; i >= posicao; i--) {
+			this.elementos[i +1] = this.elementos[i];
+		}
+		this.elementos[posicao] = elemento;
+		this.tamanho ++;
+		return true;
+	}
+	
+	public String lista() {
+		String concatStr = "";
+		for(int i = 0; i < this.elementos.length; i++) {
+			concatStr += " " + this.elementos[i];
+		}
+		return concatStr.stripLeading();
 	}
 }
