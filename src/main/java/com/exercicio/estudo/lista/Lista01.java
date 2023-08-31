@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Lista01 {
+	
 	/**
 	 * 1. Crie um método que receba uma lista de números inteiros e retorne a soma
 	 * de todos os elementos.
