@@ -1,6 +1,7 @@
 package com.exercicio.estudo.lista;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 
 public class Lista19 {
@@ -29,6 +30,12 @@ public class Lista19 {
 	public static Double averageV3(List<Integer> numbers) {
 		double sum = numbers.stream().mapToInt(Integer::intValue).sum();
 		return (Double.valueOf(sum) / numbers.size());
+	}
+	
+	// Exemplo: V4
+	public static IntSummaryStatistics averageV4(List<Integer> numbers) {
+		IntSummaryStatistics summury = numbers.stream().mapToInt(Integer::intValue).summaryStatistics();
+		return summury;
 	}
 	
 	public static void main(String[] args) {

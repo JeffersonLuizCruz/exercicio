@@ -8,6 +8,10 @@ import java.util.stream.Stream;
 
 public class Lista11 {
 
+	public static List<String> joinMatching(List<String> listA, List<String> listB) {
+		listA.stream().filter(a -> listB.contains(a)).collect(Collectors.toList());
+		return null;
+	}
 	/**
 	 * 11. Escreva um método que receba duas listas de strings inteiros e retorne
 	 * uma nova lista contendo os elementos comuns às duas listas.
