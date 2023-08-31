@@ -51,8 +51,7 @@ public class Vetor {
 		return this.elementos[posicao];
 	}
 	
-	// ToDo
-	public boolean update(int posicao, String elemento) {
+	public boolean adicionaAprimorado(int posicao, String elemento) {
 		if(!(posicao >= 0 && posicao < this.tamanho)) {
 			throw new IllegalArgumentException("Posição inválida.");
 		}
