@@ -8,7 +8,7 @@ public class VetorTest {
 		vetor.adicionaAprimorado("B");
 		vetor.adicionaAprimorado("C");
 		
-		vetor.update(3, "D");
+		vetor.adicionaAprimorado(3, "D");
 		
 		System.out.println(vetor.lista());
 		
