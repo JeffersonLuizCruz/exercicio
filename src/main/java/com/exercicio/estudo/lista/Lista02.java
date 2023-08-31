@@ -28,5 +28,7 @@ public class Lista02 {
 		
 		System.out.println("Elementos originais: " + strings);
 		System.out.println("Elementos invertidos e ordenados: " + listReverseAndSort);
+		
+		System.out.println("-----------------");
 	}
 }
