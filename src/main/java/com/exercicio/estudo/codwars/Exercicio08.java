@@ -1,8 +1,11 @@
-package com.exercicio.estudo;
+package com.exercicio.estudo.codwars;
 
 import java.util.stream.IntStream;
 
-public class Execution {
+public class Exercicio08 {
+	/*
+	 * Exercício de manipulação de CHAR com streams
+	 **/
 	public static void main(String[] args) {
 		String str = "Hugo Luiz Cruz";
 		
