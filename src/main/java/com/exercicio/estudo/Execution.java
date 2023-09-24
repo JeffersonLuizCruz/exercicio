@@ -1,18 +1,13 @@
 package com.exercicio.estudo;
 
-import java.util.stream.IntStream;
-
 public class Execution {
 	public static void main(String[] args) {
-		String str = "Hugo Luiz Cruz";
+		String str1 = "Hugo Luiz Cruz";
+		String str2 = "Hugo Luiz Cruz";
+		str2 = "Hugo Luiz Cruz";
 		
-		IntStream chars = str.chars();
+		boolean isEquals = str1.equals(str2);
 		
-		String string = chars.filter(Character::isUpperCase)
-				.mapToObj(Character::toString)
-		.collect(StringBuilder::new, 
-				StringBuilder::append, StringBuilder::append).toString();
-		
-		System.out.println(string);
+		System.out.println(isEquals);
 	}
 }
