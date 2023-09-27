@@ -13,11 +13,11 @@ public class Lista19 {
 	
 	// Exemplo: V1
 	public static Double averageV1(List<Integer> numbers) {
-		Double average = 0.0;
+		Double sum = 0.0;
 		for(Integer num : numbers) {
-			average += num; 
+			sum += num; 
 		}
-		return (average / numbers.size());
+		return (sum / numbers.size());
 	}
 	
 	// Exemplo: V2
