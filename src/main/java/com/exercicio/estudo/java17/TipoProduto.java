@@ -1,5 +1,5 @@
 package com.exercicio.estudo.java17;
 
-public class TipoProduto extends Computador {
+public final class TipoProduto extends ProdutoSeald {
 
 }

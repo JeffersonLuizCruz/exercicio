@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter @AllArgsConstructor
 public enum Enum01 {
 
-	SEGUNDA("Seg", 1), TERCA("ter", 2), QUARTA("Quar", 3), QUITA("Qui", 4), SEXTA("sex", 5);
+	SEGUNDA("Seg", 1), TERCA("Ter", 2), QUARTA("Quar", 4), QUITA("Qui", 5), SEXTA("Sex", 6);
 	
 	private String description;
 	private Integer number;

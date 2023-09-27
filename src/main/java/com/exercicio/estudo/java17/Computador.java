@@ -1,7 +1,7 @@
 package com.exercicio.estudo.java17;
 
-public non-sealed class Computador extends ProdutoSeald {
-
+public final class Computador extends ProdutoSeald {
+	@Override
 	public void acessorio() {
 		System.out.println("Acessorio para Computadores");
 	}
