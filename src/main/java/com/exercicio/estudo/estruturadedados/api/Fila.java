@@ -1,4 +1,4 @@
-package com.exercicio.estudo.estruturadedados;
+package com.exercicio.estudo.estruturadedados.api;
 
 import java.util.LinkedList;
 import java.util.Queue;

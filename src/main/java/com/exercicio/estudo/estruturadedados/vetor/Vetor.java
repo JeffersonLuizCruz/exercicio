@@ -51,9 +51,9 @@ public class Vetor {
 		return this.elementos[posicao];
 	}
 	
-	public boolean adicionaAprimorado(int posicao, String elemento) {
+	public boolean substitui(int posicao, String elemento) {
 		if(!(posicao >= 0 && posicao < this.tamanho)) {
-			throw new IllegalArgumentException("Posição inválida.");
+			throw new IllegalArgumentException("Posição inválida. Posição fora do intervalo do array.");
 		}
 		
 		for(int i = this.tamanho - 1; i >= posicao; i--) {
