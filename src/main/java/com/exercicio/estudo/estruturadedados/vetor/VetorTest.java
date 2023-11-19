@@ -1,5 +1,8 @@
 package com.exercicio.estudo.estruturadedados.vetor;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class VetorTest {
 
 	public static void main(String[] args) {
@@ -11,14 +14,8 @@ public class VetorTest {
 //
 //		System.out.println(vetor.lista());
 
-		Integer tamanho = 10;
-		Integer posicao = 5;
+//		Arrays.stream(p.tamanho).forEach(System.out::println);
 
-		for (int i = tamanho; (i +1) >= posicao; i--){
-//			int resultI = i;
-//			int result = i+1;
-			System.out.println(i + "=" + (i+1));
-		}
-		
 	}
+
 }
