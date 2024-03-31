@@ -7,8 +7,7 @@ public class Exercicio01 {
 	/*
 	 * Complete a função para que ela encontre a média das três notas passadas e
 	 * retorne o valor da letra associada a essa nota.
-	 * 
-	 * 
+	 *
 	 * Pontuação Numérica Nota da carta 
 	 * 90 <= pontuação <= 100 'A' 
 	 * 80 <= pontuação <90 'B' 
