@@ -3,6 +3,7 @@ package com.exercicio.estudo.lista;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Lista06 {
@@ -24,7 +25,7 @@ public class Lista06 {
 	
 	// Exemplo: V2
 	public static int findIndexV2(List<String> strings, String element) {
-		List<String> listLowerCase = strings.stream().map(String::toLowerCase).toList();
+		List<String> listLowerCase = strings.stream().map(String::toLowerCase).collect(Collectors.toUnmodifiableList());
 		return listLowerCase.indexOf(element.toLowerCase());
 	}
 	

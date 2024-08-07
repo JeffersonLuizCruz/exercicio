@@ -20,7 +20,7 @@ public class Lista05 {
 		for (String str : elements) {
 			unique.add(str);
 		}
-		return unique.stream().toList();
+		return unique.stream().collect(Collectors.toUnmodifiableList());
 	}
 	
 	// Exemplo: V2
@@ -31,7 +31,7 @@ public class Lista05 {
 				unique.add(str);
 			}
 		}
-		return unique.stream().toList();
+		return unique.stream().collect(Collectors.toUnmodifiableList());
 	}
 	
 	// Exemplo: V3
