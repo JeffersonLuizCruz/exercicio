@@ -14,7 +14,7 @@ public class Exercicio05 {
 	 * accum("cwAt") -> "C-Ww-Aaa-Tttt"
 	 */
 
-	public static void main(String[] args) {
+	public static void mainv(String[] args) {
 		System.out.println(accum("abcd"));
 	}
 
@@ -24,5 +24,22 @@ public class Exercicio05 {
 		.mapToObj(i -> splitStr[i].toUpperCase() + splitStr[i].repeat(i))
 		.collect(Collectors.joining("-"));
 		return collect;
+	}
+
+	public static String accum_v2(String str) {
+		String[] strSplit = str.split("");
+		String separator = "-";
+		String acumulator = "";
+
+		for(int i = 0; i < strSplit.length; i++){
+			acumulator += strSplit[i].toUpperCase() + strSplit[i].repeat(i) + separator;
+		}
+		acumulator = acumulator.substring(0, acumulator.length() -1);
+		System.out.println(acumulator);
+		return acumulator;
+	}
+
+	public static void main(String[] args) {
+		accum_v2("hugo");
 	}
 }

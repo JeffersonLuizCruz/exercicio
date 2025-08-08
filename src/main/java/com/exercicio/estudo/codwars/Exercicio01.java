@@ -1,6 +1,7 @@
 package com.exercicio.estudo.codwars;
 
 import java.util.Arrays;
+import java.util.OptionalDouble;
 
 public class Exercicio01 {
 
@@ -47,9 +48,36 @@ public class Exercicio01 {
 		
 		return 'F';
 	}
+
+	public static char getGradeV3(int s1, int s2, int s3) {
+		int average = (int) Arrays.asList(s1, s2, s3).stream()
+				.mapToInt(Integer::intValue)
+				.average()
+				.orElse(0);
+
+		switch (average / 10 ) {
+			case 9: return 'A';
+			case 8: return 'B';
+			case 7: return 'C';
+			case 6: return 'D';
+			default: return 'F';
+		}
+	}
+
+	public static char getGradeV4(int... args) {
+		double average = Arrays.stream(args).average().orElse(0);
+		if(average > 90) return 'A';
+		if(average > 80) return 'B';
+		if(average > 70) return 'C';
+		if(average > 60) return 'D';
+
+		return 'F';
+	}
 	public static void main(String[] args) {
 		
-		System.out.println(getGrade(80, 80, 85));
-		System.out.println(getGradeV2(80, 80, 85));
+		System.out.println(getGrade(70, 80, 85));
+		System.out.println(getGradeV2(70, 80, 85));
+		System.out.println(getGradeV3(70, 80, 85));
+		System.out.println(getGradeV4(50, 52, 45));
 	}
 }
