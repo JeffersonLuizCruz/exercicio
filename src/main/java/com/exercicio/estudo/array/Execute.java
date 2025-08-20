@@ -9,6 +9,6 @@ public class Execute {
         String bug2 = "Inserção de bug2";
 
         String caminhoFeliz = "caminho feliz";
-        String addNovoCaminhoFeliz
+        String addNovoCaminhoFeliz = "Add caminho feliz";
     }
 }
