@@ -8,6 +8,6 @@ public class Execute {
 
     public static void main(String[] args) {
 
-        String commit2 = "Exemplo de commit2";
+        String bug = "entrada de bug";
     }
 }
