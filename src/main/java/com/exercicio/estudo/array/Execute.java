@@ -6,5 +6,7 @@ public class Execute {
 
         String commit3 = "Trabalhando com commit3";
         String bug = "Exemplo de bug";
+
+        String caminhoFeliz = "caminho feliz";
     }
 }
