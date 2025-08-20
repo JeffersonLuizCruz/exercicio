@@ -11,5 +11,7 @@ public class Execute {
         String caminhoFeliz = "caminho feliz";
         String addNovoCaminhoFeliz = "Add caminho feliz";
         String bug3 = "Add novo bug ao sistema";
+
+        String addinclusãoCaminhoFeliz = "Add novo caminho feliz";
     }
 }
