@@ -4,7 +4,7 @@ public class Execute {
 
     public static void main(String[] args) {
 
-        String bug1 = "bug1";
+        String bug2 = "bug2";
 
     }
 }
