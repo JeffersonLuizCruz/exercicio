@@ -6,7 +6,7 @@ public class Execute {
 
         String commit1 = "bug1";
         String commit2 = "bu2";
-        String bug2 = "bug2";
+        String commit3 = "bug3";
 
     }
 }
