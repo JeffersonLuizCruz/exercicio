@@ -16,7 +16,6 @@ public class Execute {
 
     public class Teste {
         private String nome = "Teste de commit revert";
-        private String nome2 = "Teste de commit revert2";
     }
 
     /// /////
